@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de Dólar</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/js/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Cotizador de Dólar</h1>
+        <h2>Ingresa la cantidad de dólares y obtén el cambio en pesos argentinos</h2>
+    </header>
+
+    <section class="container">
+        <div class="input-container">
+            <label for="nombre">Nombre:</label>
+            <input class="nombre" type="text" id="nombre" placeholder="Ingrese su Nombre. Sin espacios, numeros o signos"/>
+            <button id="ingresar-btn">Ingresar</button>
+        </div>
+
+        <div id="cotizacion-container" style="display: none;">
+            <div class="input-container">
+                <label for="monto">Monto en dólares:</label>
+                <input type="number" id="monto" />
+                <button id="cotizar-btn">Cotizar</button>
+            </div>
+        </div>
+
+        <div id="resultado-container" style="display: none;">
+            <h2>Resultado de la cotización:</h2>
+            <p id="resultado"></p>
+        </div>
+
+        <p id="advertencia"></p>
+
+        <form id="cotizacionForm">
+            <div class="input-container">
+                <label for="fechaInput">Cotización del dolar por fecha:</label>
+                <input type="text" id="fechaInput" placeholder="Formato: dd-mm-yyyy">
+                <button type="button" id="buscar-btn">Buscar</button>
+            </div>
+            <div>
+                <h2>Ultimas actualizaciones del dolar: <br>13-06-2023 <br>10-06-2023 <br>05-06-2023</h2>
+            </div>
+        </form>
+
+        <div id="cotizaciones-pasadas">
+            <h2>Cotizaciones pasadas:</h2>
+            <ul id="cotizaciones-list"></ul>
+        </div>
+    </section>
+</body>
+</html>
